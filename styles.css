@@ -1,0 +1,38 @@
+@font-face { font-family: Montserrat; src: url('assets/montserrat-regular.ttf'); font-weight: 400; }
+@font-face { font-family: Montserrat; src: url('assets/montserrat-semibold.ttf'); font-weight: 600; }
+@font-face { font-family: Montserrat; src: url('assets/montserrat-bold.ttf'); font-weight: 700; }
+body { background: #F4F7F5; color: #16302B; }
+.site-nav { padding: 16px 0; }
+.site-nav a { color: #0F6B5F; }
+.simple-page { max-width: 850px; }
+.panel { background: white; padding: 24px; border-radius: 12px; border: 1px solid #E6EFEC; }
+.btn-primary { --bs-btn-bg: #0F6B5F; --bs-btn-border-color: #0F6B5F; --bs-btn-hover-bg: #11594f; --bs-btn-hover-border-color: #11594f; }
+input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: #b02a37; }
+input:user-invalid ~ .invalid-feedback, select:user-invalid ~ .invalid-feedback, textarea:user-invalid ~ .invalid-feedback { display: block; }
+input:user-valid:not([type='radio']):not([type='checkbox']), select:user-valid, textarea:user-valid { border-color: #198754; }
+:focus-visible { outline: 3px solid #0F6B5F; outline-offset: 3px; }
+.train-page { font-family: Montserrat, sans-serif; }
+.ticket { margin: 16px auto 32px; border-radius: 28px; overflow: hidden; background: white; box-shadow: 0 16px 32px #16302b22; }
+.ticket h1 { background: #0F6B5F; color: white; font-weight: 700; padding: 32px 48px; margin: 0; }
+.ticket form { padding: 40px 48px; }
+.ticket .form-control, .ticket .form-select { background-color: #F4F7F5; border-color: #d4dfda; border-radius: 14px; min-width: 0; }
+.ticket .form-label, .ticket legend { font-size: 1rem; font-weight: 600; }
+.ticket .form-control:not(.form-floating input), .ticket .form-select { padding: 12px 16px; }
+.ticket .form-check-input:checked { background-color: #0F6B5F; border-color: #0F6B5F; }
+.ticket .input-group-text { background: #0F6B5F; color: white; border-color: #0F6B5F; border-radius: 14px 0 0 14px; font-weight: 700; }
+.trip-options .btn { color: #0F6B5F; border: 1px solid #0F6B5F; padding: 10px 24px; font-weight: 600; }
+.trip-options .btn:first-of-type { border-radius: 40px 0 0 40px; }
+.trip-options .btn:last-of-type { border-radius: 0 40px 40px 0; }
+.trip-options .btn-check:checked + .btn { color: white; background: #0F6B5F; }
+.ticket-actions { display: flex; justify-content: flex-end; gap: 12px; }
+.ticket-actions .btn { border-radius: 40px; padding: 14px 32px; font-weight: 700; }
+.find-trains { background: #F2A93B; color: #16302B; }
+.find-trains:hover { background: #e79c2c; }
+.clear-form { border: 1px solid #16302B; }
+@media (max-width: 767.98px) {
+  .ticket h1 { padding: 24px; font-size: 1.6rem; }
+  .ticket form { padding: 24px; }
+  .ticket-actions { flex-direction: column-reverse; }
+  .trip-options { display: flex; }
+  .trip-options .btn { flex: 1; padding: 10px 12px; }
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 2 — AITU Hack 2026</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="container simple-page site-nav" aria-label="Main navigation"><a href="index.html">Home</a></nav>
+  <main class="container simple-page pb-4">
+    <h1>AITU Hack 2026</h1>
+    <p>Student hackathon registration. Fields marked with * are required.</p>
+    <form class="panel" action="success.html" method="get">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="full-name">Full name *</label>
+          <input class="form-control" type="text" id="full-name" name="full-name" required minlength="2" maxlength="40" autocomplete="name" aria-describedby="full-name-hint full-name-error">
+          <div class="form-text" id="full-name-hint">Enter 2–40 characters.</div>
+          <div class="invalid-feedback" id="full-name-error">Enter 2–40 characters.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="email">University email *</label>
+          <input class="form-control" type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-hint email-error">
+          <div class="form-text" id="email-hint">Enter a valid email address.</div>
+          <div class="invalid-feedback" id="email-error">Enter a valid email address.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="age">Age *</label>
+          <input class="form-control" type="number" id="age" name="age" required min="16" max="30" step="1" aria-describedby="age-hint age-error">
+          <div class="form-text" id="age-hint">Enter a whole number from 16 to 30.</div>
+          <div class="invalid-feedback" id="age-error">Enter a whole number from 16 to 30.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="team-size">Team size *</label>
+          <input class="form-control" type="number" id="team-size" name="team-size" required min="1" max="4" step="1" aria-describedby="team-size-hint team-size-error">
+          <div class="form-text" id="team-size-hint">Enter a whole number from 1 to 4.</div>
+          <div class="invalid-feedback" id="team-size-error">Enter a whole number from 1 to 4.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="track">Track *</label>
+          <select class="form-select" id="track" name="track" required aria-describedby="track-error">
+            <option value="">Choose…</option><option value="Web">Web</option><option value="Mobile">Mobile</option><option value="AI">AI</option><option value="GameDev">GameDev</option>
+          </select>
+          <div class="invalid-feedback" id="track-error">Choose a track.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="arrival">Arrival day *</label>
+          <input class="form-control" type="date" id="arrival" name="arrival" required min="2026-11-20" max="2026-11-22" aria-describedby="arrival-hint arrival-error">
+          <div class="form-text" id="arrival-hint">Choose 20–22 November 2026.</div>
+          <div class="invalid-feedback" id="arrival-error">Choose 20–22 November 2026.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="check-in">Check-in time *</label>
+          <input class="form-control" type="time" id="check-in" name="check-in" required min="09:00" max="18:00" step="1800" aria-describedby="check-in-hint check-in-error">
+          <div class="form-text" id="check-in-hint">Choose 09:00–18:00 in 30-minute steps.</div>
+          <div class="invalid-feedback" id="check-in-error">Choose 09:00–18:00 in 30-minute steps.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fee">Entry fee (₸) *</label>
+          <input class="form-control" type="number" id="fee" name="fee" required min="0" max="5000" step="500" aria-describedby="fee-hint fee-error">
+          <div class="form-text" id="fee-hint">Enter 0–5000 ₸ in steps of 500.</div>
+          <div class="invalid-feedback" id="fee-error">Enter 0–5000 ₸ in steps of 500.</div>
+        </div>
+        <div class="col-12">
+          <fieldset>
+            <legend class="fs-6">Experience level *</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="experience" id="level-0" value="Beginner" required aria-describedby="experience-error">
+              <label class="form-check-label" for="level-0">Beginner</label>
+              <div class="invalid-feedback" id="experience-error">Choose your experience level.</div>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="experience" id="level-1" value="Intermediate" required aria-describedby="experience-error">
+              <label class="form-check-label" for="level-1">Intermediate</label>
+              
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="experience" id="level-2" value="Advanced" required aria-describedby="experience-error">
+              <label class="form-check-label" for="level-2">Advanced</label>
+              
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="github">GitHub profile (optional)</label>
+          <input class="form-control" type="url" id="github" name="github" placeholder="https://github.com/your-name" aria-describedby="github-hint github-error">
+          <div class="form-text" id="github-hint">Enter a full URL, including https://, or leave empty.</div>
+          <div class="invalid-feedback" id="github-error">Enter a full URL, including https://, or leave empty.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="password">Password *</label>
+          <input class="form-control" type="password" id="password" name="password" required minlength="8" maxlength="20" autocomplete="new-password" aria-describedby="password-hint password-error">
+          <div class="form-text" id="password-hint">Enter 8–20 characters.</div>
+          <div class="invalid-feedback" id="password-error">Enter 8–20 characters.</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="motivation">Motivation *</label>
+          <textarea class="form-control" id="motivation" name="motivation" rows="4" minlength="50" maxlength="300" required aria-describedby="motivation-hint motivation-error"></textarea>
+          <div class="form-text" id="motivation-hint">Write 50–300 characters.</div>
+          <div class="invalid-feedback" id="motivation-error">Write 50–300 characters.</div>
+        </div>
+        <div class="col-12"><div class="form-check">
+          <input class="form-check-input" type="checkbox" id="rules" name="rules" value="accepted" required aria-describedby="rules-error">
+          <label class="form-check-label" for="rules">I agree to the hackathon rules *</label>
+          <div class="invalid-feedback" id="rules-error">You must agree to the rules.</div>
+        </div></div>
+        <div class="col-12"><button class="btn btn-primary" type="submit">Register</button></div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
